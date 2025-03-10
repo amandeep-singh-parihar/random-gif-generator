@@ -1,30 +1,16 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import Spinner from "./Spinner";
-import useGif from "../Hooks/useGif";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import Spinner from './Spinner';
+import useGif from '../Hooks/useGif';
 
 const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
 function Tag() {
   // const [gif, setGif] = useState("");
   // const [loading, setLoading] = useState(false);
-  const [tag, setTag] = useState("");
+  const [tag, setTag] = useState('');
 
-  // async function fetchData() {
-  //   setLoading(true);
-  //   const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=${tag}`;
-  //   const { data } = await axios.get(url);
-  //   const imageScource = data.data.images.downsized_large.url;
-  //   // console.log(imageScource);
-  //   setGif(imageScource);
-  //   setLoading(false);
-  // }
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
-  const {gif,loading,fetchData}=useGif(tag);
+  const { gif, loading, fetchData } = useGif(tag);
   // we have to pass the tag in this hook for the urls
   //custom hook
 
@@ -49,11 +35,7 @@ function Tag() {
               <Spinner />
             </div>
           ) : (
-            <img
-              src={gif}
-              alt="Random GIF"
-              className="object-cover w-full h-full rounded-lg"
-            />
+            <img src={gif} alt="Random GIF" className="object-cover w-full h-full rounded-lg" />
           )}
         </div>
         <input
