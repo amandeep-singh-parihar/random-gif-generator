@@ -45,5 +45,5 @@ npm run dev
 ### Screenshots
 
 ![App Screenshot](screenshots/image.png)
-![App Screenshot](screenshots/image%20copy.png)
 
+![App Screenshot](screenshots/image%20copy.png)
